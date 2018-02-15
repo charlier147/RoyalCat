@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on("ready", () => {
   console.log("im readyyyyy");
   
-  client.user.setPresence({ game: { name: "raidcentral.com", type: 0 } });
+  client.user.setPresence({ game: { name: "Boo-Hu-Hu", type: 0 } });
 });
 
 var prefix = "!"
