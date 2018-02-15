@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    Client.user.setPresence({ status: 'online', game: { name: '! | HCF CLAN' } });
+  console.log('HFC -  STARTING!');
 });
 
 client.on('message', msg => {
