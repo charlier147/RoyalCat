@@ -6,21 +6,29 @@ client.on('ready', () => {
 
  });
 
-client.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  newUsers[guild.id].set(member.id, member.user);
+var prefix = "!"
+client.on('message', message => {
+	let args = message.content.split(' ').slice(1);
+	var result = args.join(' ');
 
-  if (newUsers[guild.id].size > 10) {
-    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.get(guild.id).send("Welcome \n" + userlist + "! Make sure to read #rules-information!");
-    newUsers[guild.id].clear();
-  }
-});
+	if (!message.content.startsWith(prefix)) return;
+	if (message.author.bot) return;
 
-client.on("guildMemberRemove", (member) => {
-  const guild = member.guild;
-  if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
+
+
+	if (message.content.startsWith(prefix + 'setgame')) {
+		if (!result) {
+			result = null;
+		}
+		client.user.setGame(result);
+	} else
+
+	if (message.content.startsWith(prefix + 'setstatus')) {
+		if (!result) {
+			result = 'online';
+		}
+		client.user.setStatus(result);
+	}
 });
 
 client.login(process.env.TOKEN);
