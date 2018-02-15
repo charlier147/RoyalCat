@@ -1,1 +1,1 @@
-worker: npm start
+worker: node Discord.js
