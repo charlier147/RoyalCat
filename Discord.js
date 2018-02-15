@@ -1,26 +1,16 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on("ready", () => {
-  console.log("im readyyyyy");
-  
-  client.user.setPresence({ game: { name: "Boo-Hu-Hu", type: 0 } });
+client.on('ready', () => {
+    client.user.setActivity('Hanzo', {type: 'WATCHING'});
 });
 
-var prefix = "!"
-
 client.on('message', msg => {
-  if (msg.author.bot) return;
-  if (msg.content.indexOf(prefix) !== 0) return;
-
-  const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase()
-
-  if (command === "ping") {
-    msg.delete();
-    msg.channel.send("Pong...").then((msg) => {
-      msg.edit(`Pong! Latency is ${msg.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-    });
-  }
+    if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
+    const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
+    const args = msg.content.split(' ').slice(1).join(' ');
+    if (command === 'guide') return msg.channel.send('');
+    else if (command === 'invite') return msg.channel.send(process.env.INVITE);
+});
 
 client.login(process.env.TOKEN);
