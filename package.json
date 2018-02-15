@@ -2,7 +2,7 @@
   "name": "rcbot",
   "version": "1.0.0",
   "description": "HAUNTED/RC BOT",
-  "main": "index.js",
+  "main": "Discord.js",
   "scripts": {
     "start": "node Discord.js"
   },
