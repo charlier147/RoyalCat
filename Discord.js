@@ -29,6 +29,11 @@ client.on('message', message => {
 		}
 		client.user.setStatus(result);
 	}
+	
+	client.on('guildMemberAdd', member => {
+  let guild = member.guild;
+  guild.defaultChannel.sendMessage(`Please welcome ${member.user.username} to the server!`);
+});
 });
 
 client.login(process.env.TOKEN);
