@@ -1,13 +1,30 @@
 {
-  "name": "rcbot",
+  "name": "haunter-bots",
   "version": "1.0.0",
-  "description": "HAUNTED/RC BOT",
+  "description": "Haunter Bots",
   "main": "Discord.js",
+  "engines": {
+    "node": "8.x",
+    "npm": "*"
+  },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Discord.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synicalsyntax/discord.js-heroku.git"
+  },
+  "keywords": [
+    "heroku",
+    "discord.js"
+  ],
+  "author": "synicalsyntax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synicalsyntax/discord.js-heroku/issues"
+  },
+  "homepage": "https://github.com/synicalsyntax/discord.js-heroku#readme",
   "dependencies": {
     "discord.js": "^11.3.0"
   }
