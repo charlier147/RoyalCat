@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setActivity('Hanzo', {type: 'WATCHING'});
+    client.user.setActivity('! | HCZ CLAN', {type: 'WATCHING'});
 });
 
 client.on('message', msg => {
