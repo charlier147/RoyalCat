@@ -13,7 +13,7 @@ client.on("guildMemberAdd", (member) => {
 
   if (newUsers[guild.id].size > 10) {
     const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.get(guild.id).send("Welcome \n" + userlist + "! Make sure to read #rules-information!);
+    guild.channels.get(guild.id).send("Welcome \n" + userlist + "! Make sure to read #rules-information!");
     newUsers[guild.id].clear();
   }
 });
