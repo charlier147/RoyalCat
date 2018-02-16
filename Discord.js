@@ -22,8 +22,6 @@ client.on("guildDelete", guild => {
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
-});
-
 client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
   if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
