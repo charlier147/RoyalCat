@@ -13,13 +13,11 @@ client.on("ready", () => {
 client.on("guildCreate", guild => {
 
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
 client.on("guildDelete", guild => {
 
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -32,7 +30,6 @@ client.on("guildMemberAdd", (member) => {
     guild.channels.get(guild.id).send("Welcome our new users!\n" + userlist);
     newUsers[guild.id].clear();
   }
-});
 
 client.on("guildMemberRemove", (member) => {
   const guild = member.guild;
