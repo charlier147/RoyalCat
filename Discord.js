@@ -5,7 +5,6 @@ client.on("ready", () => {
 
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
 
-  // docs refer to as the "ClientUser".
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
@@ -32,7 +31,6 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  // Let's go with a few common example commands! Feel free to delete or change those.
   
   if(command === "ping") {
     
