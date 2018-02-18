@@ -7,7 +7,7 @@ client.on("ready", () => {
   client.user.setPresence({ game: { name: "Overwatch", type: 0 } });
 });
 
-var prefix = "!"
+var prefix = "++"
 
 client.on('message', msg => {
   if (msg.author.bot) return;
