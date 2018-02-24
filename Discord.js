@@ -1,17 +1,21 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const bot = new Discord.Client({autoReconnect: true});
 
-client.on("ready", () => {
-  console.log("im readyyyyy");
-  
-  client.user.setPresence({ game: { name: "Overwatch", type: 0 } });
+bot.on('ready', () => {
+
+  bot.user.setStatus("dnd"); //dnd , online , ldle
+  bot.user.setGame("with your mom!");
+  console.log("Houston ! Le bot est en ligne");
 });
 
-if(command === "say") {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
-    message.channel.send(sayMessage);
-  }};
-  }
+
+bot.on("message", msg => {
+  
+    if (msg.content.startsWith(prefix + "mpmoi")){
+      msg.author.sendMessage("Bonjour Houston !")
+      console.log("Command executed : /mpmoi")
+    }
+
+});
 
 client.login(process.env.TOKEN);
