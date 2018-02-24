@@ -18,4 +18,4 @@ bot.on("message", msg => {
 
 });
 
-client.login(process.env.TOKEN);
+bot.login(process.env.TOKEN);
