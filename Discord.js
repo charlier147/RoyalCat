@@ -2,10 +2,8 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({autoReconnect: true});
 
 bot.on('ready', () => {
-
-  bot.user.setStatus("dnd"); //dnd , online , ldle
-  bot.user.setGame("with your mom!");
-  console.log("Houston ! Le bot est en ligne");
+        bot.setStreaming('Principal Academia Club', '', 1);
+});
 });
 
 
