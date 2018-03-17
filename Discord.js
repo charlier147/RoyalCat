@@ -41,7 +41,7 @@ client.on('message', msg => {
     msg.delete().catch(O_o=>{}); 
     msg.channel.send(sayMessage)
     .then(msg => {
-    msg.delete(10000)
+    msg.delete(60)
   })
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
   }
