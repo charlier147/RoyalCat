@@ -40,25 +40,25 @@ client.on('message', msg => {
     msg.delete();
     if (!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.send("You do not have permission to perform this command.")
     const embed = {
-      "description": "Welcome to **RaidCentral**, a magnificent Minecraft server that offers a top-tier Factions experience! \nEndless fun, action-packed adventures, including a huge and welcoming community. \nThe server is owned and managed by experienced people who have been managing servers for multiple years.",
-      "url": "https://raidcentral.com/",
-      "color": 0xCDA5E4,
+      "description": "*Welcome to @P.A.C.* Make sure to follow our rules and check out the news.* \n",
+      "url": "",
+      "color": 0x6ed6ed,
       "footer": {
-        "text": "Will you conquer or be conquered? | raidcentral.com"
+        "text": "#P.A.C | Administration"
       },
       "author": {
-        "name": "RaidCentral Administration",
-        "url": "https://raidcentral.com",
-        "icon_url": "https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2017-05-29/190381481751_db77f5e7bb6c6967597b_132.jpg"
+        "name": "P.A.C | Administration",
+        "url": "",
+        "icon_url": "https://i.vimeocdn.com/video/671932732_780x439.jpg"
       },
       "fields": [
         {
-          "name": "WHAT IS THE IP ADDRESS AND WEBSITE?",
-          "value": "You can visit the website and join the server with [**raidcentral.com**](https://raidcentral.com), it works on both. The server is 1.7-1.12 so there should be no worries about the client version. You can also join our forums, which can be found on our website, there you can report people, submit your application for staff or simply just engage with the amazing community that we have!"
+          "name": "SPAM",
+          "value": "Do not spam or flood the chat with message. \nNot following this rule will result as a Mute (**30 minute mute**), kick or Ban. "
         },
         {
-          "name": "I NEED HELP, WHO DO I CONTACT?",
-          "value": "You can contact anyone here, on Discord, on the forums or in-game. We have multiple staff member ready to assist you with your issues! All you have to do is to tag them or message them privately! Hopefully they can help you get the best solution possible, you can also use the #support channel to get some assistance, the whole community, including staff members, can help you out there!"
+          "name": "FLAME WARS",
+          "value": "Do not start flame wars. \nDummy dictonary : a lengthy exchange of angry or abusive messages between users of an online forum or other discussion area."
         },
         {
           "name": "RULES",
