@@ -27,7 +27,7 @@ client.on('message', msg => {
 
   if (command === "ping") {
     msg.channel.send("Pong...").then((msg) => {
-      msg.edit(`Pong! Latency is ${msg.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`)
+      msg.edit(`Pong! Latency is ${msg.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
       msg.channel.send(sayMessage)
     .then(msg => {
     msg.delete(10000)
