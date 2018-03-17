@@ -40,7 +40,7 @@ client.on('message', msg => {
     msg.delete();
     if (!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.send("You do not have permission to perform this command.")
     const embed = {
-      "description": "*Welcome to @P.A.C. *Make sure to follow our rules and check out the news.* \n ",
+      "description": "*Welcome to @P.A.C.* \n*Make sure to follow our rules and check out the news.* \n ",
       "url": "",
       "color": 0x6ed6ed,
       "footer": {
@@ -49,7 +49,7 @@ client.on('message', msg => {
       "author": {
         "name": "P.A.C | Administration",
         "url": "",
-        "icon_url": "https://i.vimeocdn.com/video/671932732_780x439.jpg"
+        "icon_url": ""
       },
       "fields": [
         {
@@ -67,11 +67,7 @@ client.on('message', msg => {
         {
           "name": "ADVERTISING",
           "value": "Do not advertise. No posting other servers **Links**, **Forums**, etc."
-          },
-        {
-          "name": "ADVERTISING",
-          "value": "Do not advertise. No posting other servers **Links**, **Forums**, etc."
-          },
+          },        
         {
           "name": "CHANNELS",
           "value": "Keep all Conversations in the channel they are suppose too!"
