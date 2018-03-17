@@ -3,10 +3,10 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("im readyyyyy");
-  
-  // Sets the bot's "Playing" status to "raidcentral.com".
+     client.user.setStatus("idle");
+
   // type: 0 = Playing, 1 = Streaming, 2 = Watching, 3 = Listening
-  client.user.setPresence({ game: { name: "@P.A.C/Bot", type: 0 } });
+  client.user.setPresence({ game: { name: "@P.A.C/Channels", type: 2 } });
 });
 
 // All new users, who join the Discord, will be given the "Member" role upon joining.
