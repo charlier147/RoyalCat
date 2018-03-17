@@ -40,6 +40,10 @@ client.on('message', msg => {
     const sayMessage = args.join(" ");
     msg.delete().catch(O_o=>{}); 
     msg.channel.send(sayMessage);
+    .then(msg => {
+    msg.delete(10000)
+  })
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
   }
  
   if (command === "welcome") {
