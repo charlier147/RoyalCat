@@ -147,15 +147,6 @@ client.on('message', msg => {
     };
     msg.channel.send({ embed });
   }
-   
-  if(command === "purge") {
-    const deleteCount = parseInt(args[0], 10);    
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return msg.reply("Error.");  
-    const fetched = await msg.channel.fetchMessages({count: deleteCount});
-    msg.channel.bulkDelete(fetched)
-      .catch(error => msg.reply(`Couldn't delete messages because of: ${error}`));
-  }
- 
+
 });
 client.login(process.env.TOKEN);
