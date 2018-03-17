@@ -35,6 +35,12 @@ client.on('message', msg => {
     if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("You do not have permission to perform this command.")
     msg.channel.send("**Current commands available**: `welcome`, `rules`, `ping` and `commands`. \n**Command usage example**: `.r <command>`")
   }
+  
+  if(command === "say") {
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{}); 
+    message.channel.send(sayMessage);
+  }
 
   if (command === "welcome") {
     msg.delete();
