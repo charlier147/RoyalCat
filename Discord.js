@@ -39,7 +39,7 @@ client.on('message', msg => {
   if(command === "say") {
     const sayMessage = args.join(" ");
     msg.delete().catch(O_o=>{}); 
-    msg.channel.send(sayMessage);
+    msg.channel.send(sayMessage)
     .then(msg => {
     msg.delete(10000)
   })
