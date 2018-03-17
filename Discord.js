@@ -38,8 +38,8 @@ client.on('message', msg => {
   
   if(command === "say") {
     const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
-    message.channel.send(sayMessage);
+    msg.delete().catch(O_o=>{}); 
+    msg.channel.send(sayMessage);
   }
 
   if (command === "welcome") {
