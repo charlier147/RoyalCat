@@ -51,7 +51,7 @@ client.on('message', msg => {
     msg.channel.bulkDelete(fetched)
       .catch(error => msg.reply(`Couldn't delete messages because of: ${error}`));
   }
-
+ });
   if (command === "welcome") {
     msg.delete();
     if (!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.send("You do not have permission to perform this command.")
