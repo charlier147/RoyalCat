@@ -40,7 +40,7 @@ client.on('message', msg => {
     msg.delete();
     if (!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.send("You do not have permission to perform this command.")
     const embed = {
-      "description": "*Welcome to @P.A.C.* Make sure to follow our rules and check out the news.* \n",
+      "description": "*Welcome to @P.A.C. *Make sure to follow our rules and check out the news.* \n ",
       "url": "",
       "color": 0x6ed6ed,
       "footer": {
@@ -58,12 +58,40 @@ client.on('message', msg => {
         },
         {
           "name": "FLAME WARS",
-          "value": "Do not start flame wars. \nDummy dictonary : a lengthy exchange of angry or abusive messages between users of an online forum or other discussion area."
+          "value": "**Do not start flame wars**. \nDummy dictonary *:* A lengthy exchange of angry or abusive messages between users of an online forum or other discussion area."
         },
         {
-          "name": "RULES",
-          "value": "Please, make sure to read the rules in the #rules channel, these rules do not apply in-game or on the forums, only on this Discord server. If a member fails to follow them, the staff member will, sadly, be forced to take actions for the safety of other members."
-        }
+          "name": "BULLY, HARRASMENT, RACISM, ETC.",
+          "value": "Bullying, harassment, racism, sexism or any sort of discrimination will not be tolerated. It will be conducted as a ban!"
+        },
+        {
+          "name": "ADVERTISING",
+          "value": "Do not advertise. No posting other servers **Links**, **Forums**, etc."
+          },
+        {
+          "name": "ADVERTISING",
+          "value": "Do not advertise. No posting other servers **Links**, **Forums**, etc."
+          },
+        {
+          "name": "CHANNELS",
+          "value": "Keep all Conversations in the channel they are suppose too!"
+          },
+        {
+          "name": "CATFISHING",
+          "value": "Catfishing isn't allowed! If you're found catfishing proof will be asked!"
+           },
+        {
+          "name": "NUISANCE",
+          "value": "Do not cause a nuisance in the community, repeated complaints from several members will lead to administrative action."
+           },
+        {
+          "name": "DDOS, DOX AND HACK THREATS",
+          "value": "No DDOS, DOX and HACK Threats, this will result as an instant ban!"
+           },
+        {
+          "name": "RESPECT",
+          "value": "Respect all players, this rule is also stand for players privacy. \nExposing other players privacy will result a perm mute or ban."
+          
       ]
     };
     msg.channel.send({ embed });
