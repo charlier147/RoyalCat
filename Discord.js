@@ -91,7 +91,7 @@ client.on('message', msg => {
         {
           "name": "RESPECT",
           "value": "Respect all players, this rule is also stand for players privacy. \nExposing other players privacy will result a perm mute or ban."
-          
+        }
       ]
     };
     msg.channel.send({ embed });
