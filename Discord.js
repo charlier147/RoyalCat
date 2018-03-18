@@ -35,7 +35,7 @@ client.on('message', msg => {
 
   if (command === "commands") {
     if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("You do not have permission to perform this command.")
-    msg.channel.send("**Current commands available**: `welcome`, `rules`, `ping` and `commands`. \n**Command usage example**: `.r <command>`")
+    msg.channel.send("**Current commands available**: `welcome`, `rules`, `ping`, `commands` , `say`. \n**Command usage example**: `.r <command>`")
   }
   
   if(command === "say") {
