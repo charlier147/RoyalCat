@@ -53,12 +53,16 @@ client.on('message', msg => {
 
     let sicon = msg.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
+     msg.delete().catch(O_o=>{})
     .setDescription("**Server Information**")
     .setColor("#407edb")
     .setThumbnail(sicon)
     .addField("Server Name", msg.guild.name)
     .addField("Created On", msg.guild.createdAt)
-    .addField("Total Members", msg.guild.memberCount);
+    .addField("Total Members", msg.guild.memberCount)
+    .then(msg => {
+     msg.delete(10000)
+    
 
     return msg.channel.send(serverembed);
   }
