@@ -3,10 +3,10 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("im readyyyyy");
-     client.user.setStatus("idle");
+     client.user.setStatus("dnd");
 
   // type: 0 = Playing, 1 = Streaming, 2 = Watching, 3 = Listening
-  client.user.setPresence({ game: { name: "@P.A.C/Channels", type: 2 } });
+  client.user.setPresence({ game: { name: "P.A.C/Channels", type: 1 } });
 });
 
 // All new users, who join the Discord, will be given the "Member" role upon joining.
