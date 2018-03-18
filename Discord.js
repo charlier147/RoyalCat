@@ -60,8 +60,8 @@ client.on('message', msg => {
     .addField("Server Name", msg.guild.name)
     .addField("Created On", msg.guild.createdAt)
     .addField("Total Members", msg.guild.memberCount)
-    .then(msg => {
-    msg.delete(10000)
+   
+    
     return msg.channel.send(serverembed);
   }
 
