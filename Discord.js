@@ -62,6 +62,7 @@ client.on('message', msg => {
     .then(msg => {
      msg.delete(10000)
     
+  })
 
     return msg.channel.send(serverembed);
   }
