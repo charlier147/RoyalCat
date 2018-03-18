@@ -48,6 +48,22 @@ client.on('message', msg => {
   })
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
   }
+  
+  if(cmd === "serverinfo") {
+
+    let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .setDescription("Server Information")
+    .setColor("#15f153")
+    .setThumbnail(sicon)
+    .addField("Server Name", message.guild.name)
+    .addField("Created On", message.guild.createdAt)
+    .addField("You Joined", message.member.joinedAt)
+    .addField("Total Members", message.guild.memberCount);
+
+    return message.channel.send(serverembed);
+  }
+
  
   if (command === "welcome") {
     msg.delete();
