@@ -11,10 +11,7 @@ client.on("ready", () => {
 
 // All new users, who join the Discord, will be given the "Member" role upon joining.
 client.on("guildMemberAdd", function(member) { 
-  member.guild.channels.find("name","welcomer").sendMessage({embed: {
-  color: 3447003,
-  description: "member.toString() + " Welcome to `@P.A.C`, make sure to read #welcome"
-}}););
+  member.guild.channels.find("name","welcomer").sendMessage(member.toString() + " Welcome to `@P.A.C`, make sure to read #welcome");
   member.addRole(member.guild.roles.find("name", "Member"));
 });
 
