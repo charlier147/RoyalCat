@@ -41,7 +41,7 @@ client.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-
+});
 // All new users, who join the Discord, will be given the "Member" role upon joining.
 client.on("guildMemberAdd", function(member) { 
   member.guild.channels.find("name","welcomer").sendMessage(member.toString() + " Welcome to `P.A.C`, make sure to read #welcome");
