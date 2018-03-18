@@ -52,7 +52,7 @@ client.on('message', msg => {
   if(command === "serverinfo") {
 
     let sicon = msg.guild.iconURL;
-    let serverembed = new msg.RichEmbed()
+    let serverembed = new Discord.RichEmbed()
     .setDescription("Server Information")
     .setColor("#15f153")
     .setThumbnail(sicon)
