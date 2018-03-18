@@ -49,19 +49,19 @@ client.on('message', msg => {
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
   }
   
-  if(cmd === "serverinfo") {
+  if(command === "serverinfo") {
 
-    let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
+    let sicon = msg.guild.iconURL;
+    let serverembed = new msg.RichEmbed()
     .setDescription("Server Information")
     .setColor("#15f153")
     .setThumbnail(sicon)
-    .addField("Server Name", message.guild.name)
-    .addField("Created On", message.guild.createdAt)
-    .addField("You Joined", message.member.joinedAt)
-    .addField("Total Members", message.guild.memberCount);
+    .addField("Server Name", msg.guild.name)
+    .addField("Created On", msg.guild.createdAt)
+    .addField("You Joined", msg.member.joinedAt)
+    .addField("Total Members", msg.guild.memberCount);
 
-    return message.channel.send(serverembed);
+    return msg.channel.send(serverembed);
   }
 
  
