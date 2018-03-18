@@ -50,6 +50,7 @@ client.on('message', msg => {
   }
   
   if(command === "serverinfo") {
+     msg.delete();
     if (!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.send("You do not have permission to perform this command.")
     let sicon = msg.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
@@ -59,7 +60,8 @@ client.on('message', msg => {
     .addField("Server Name", msg.guild.name)
     .addField("Created On", msg.guild.createdAt)
     .addField("Total Members", msg.guild.memberCount)
-
+    .then(msg => {
+    msg.delete(10000)
     return msg.channel.send(serverembed);
   }
 
