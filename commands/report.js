@@ -7,15 +7,16 @@ module.exports.run = async (bot, message, args) => {
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("**Reports**")
-    .addField("────────")
+    .addField("────────────────────────". ``)
     .setColor("#eff585")
     .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-    .addField("──────── ")
+    .addField("────────────────────────". ``)
     .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
+    .addField("────────────────────────". ``)
     .addField("Channel", message.channel)
-    .addField("──────── ")
+    .addField("────────────────────────". ``)
     .addField("Time", message.createdAt)
-    .addField("──────── ")
+    .addField("────────────────────────". ``)
     .addField("Reason", rreason);
 
     let reportschannel = message.guild.channels.find(`name`, "reports");
