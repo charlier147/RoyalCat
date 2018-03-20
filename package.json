@@ -1,15 +1,15 @@
 {
-  "name": "haunter-bots",
+  "name": "RoyalCat",
   "version": "1.0.0",
-  "description": "Haunter Bots",
-  "main": "Discord.js",
+  "description": "RoyalCat",
+  "main": "index.js",
   "engines": {
     "node": "8.x",
     "npm": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Discord.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
