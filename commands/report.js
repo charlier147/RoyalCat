@@ -5,11 +5,13 @@ module.exports.run = async (bot, message, args) => {
     
    let sEmbed = new Discord.RichEmbed()
   .setColor("#ebde26")
-  .setTitle("USER")
-  .setDescription(`USER NOT FOUNT`);
+  .setTitle("📃USER📃")
+  .setDescription(`**USER NOT FOUNT**`);
 
    if(!rUser) return   message.channel.send(sEmbed);
-        
+        .then(message => {
+    message.delete(10000)
+  })
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
