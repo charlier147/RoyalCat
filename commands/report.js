@@ -6,8 +6,6 @@ module.exports.run = async (bot, message, args) => {
   color: 3447003,
   description: "Couldn't find the player."      
 }});
-    .then(message => {
-    message.delete(10000)
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
