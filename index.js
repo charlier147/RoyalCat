@@ -27,8 +27,6 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on("ready", async () => {
 
-  console.log(`${client.user.username} is online on ${client.guilds.size} servers!`);
-  client.user.setActivity("tutorials on TSC", {type: "WATCHING"});
 
 });
 
