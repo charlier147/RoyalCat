@@ -2,10 +2,14 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send({embed: {
-  color: 0xebde26,
-  description: "Couldn't find the player."      
-}});
+    
+   let sEmbed = new Discord.RichEmbed()
+  .setColor("#ebde26")
+  .setTitle("USER")
+  .setDescription(`USER NOT FOUNT`);
+
+   if(!rUser) return   message.channel.send(sEmbed);
+        
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
