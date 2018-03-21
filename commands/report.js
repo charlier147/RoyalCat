@@ -4,9 +4,7 @@ module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send({embed: {
   color: 3447003,
-  description: "Couldn't find the player."
-        .then(message => {
-    message.delete(10000)
+  description: "Couldn't find the player."      
 }});
     let rreason = args.join(" ").slice(22);
 
