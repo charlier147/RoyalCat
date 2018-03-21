@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
     if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
 
-    message.delete().catch(O_o=>{});
+    message.delete().catch(O_o=>{})
     .then(message => {
     message.delete(10000)
     reportschannel.send(reportEmbed);
