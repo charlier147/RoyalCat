@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send({embed: {
-  color: ebde26,
+  color: 0xebde26,
   description: "Couldn't find the player."      
 }});
     let rreason = args.join(" ").slice(22);
