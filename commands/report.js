@@ -27,6 +27,8 @@ module.exports.run = async (bot, message, args) => {
 
 
     message.delete().catch(O_o=>{});
+    .then(message => {
+    message.delete(10000)
     reportschannel.send(reportEmbed);
 
 }
