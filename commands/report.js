@@ -12,6 +12,8 @@ module.exports.run = async (bot, message, args) => {
         .then(message => {
     message.delete(10000)
   })
+    .catch
+}
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
