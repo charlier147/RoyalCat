@@ -9,10 +9,6 @@ module.exports.run = async (bot, message, args) => {
   .setDescription(`**USER NOT FOUNT**`);
 
    if(!rUser) return   message.channel.send(sEmbed);
-        .then(message => {
-    message.delete(10000)
-  })
-    .catch
 }
     let rreason = args.join(" ").slice(22);
 
