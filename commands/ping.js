@@ -11,5 +11,5 @@ module.exports.run = async (client, message, args) => {
             .addField(`📥     \`Latency\``, `       \`${lat_ms}ms\``, true)
             .addField(`📤     \`API\``, `       \`${api_ms}ms\``, true)
         message.channel.send(embed);
-    });
+    })
 } 
